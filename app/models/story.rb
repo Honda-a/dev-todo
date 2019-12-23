@@ -1,4 +1,4 @@
-class Todo < ApplicationRecord
+class Story < ApplicationRecord
   belongs_to :type
   belongs_to :user
 end
