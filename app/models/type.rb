@@ -1,3 +1,3 @@
 class Type < ApplicationRecord
-    has_many :todos
+    has_many :story
 end
