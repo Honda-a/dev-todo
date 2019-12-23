@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_17_042508) do
+ActiveRecord::Schema.define(version: 2019_12_20_061454) do
 
-  create_table "todos", force: :cascade do |t|
+  create_table "stories", force: :cascade do |t|
     t.string "title"
     t.string "detail"
     t.integer "type_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["type_id"], name: "index_todos_on_type_id"
-    t.index ["user_id"], name: "index_todos_on_user_id"
+    t.index ["type_id"], name: "index_stories_on_type_id"
+    t.index ["user_id"], name: "index_stories_on_user_id"
   end
 
   create_table "types", force: :cascade do |t|
-    t.string "name"
+    t.text "name"
     t.string "description"
     t.integer "group"
     t.text "group_name"
@@ -33,15 +33,15 @@ ActiveRecord::Schema.define(version: 2019_12_17_042508) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email", null: false
+    t.string "email"
     t.string "password_digest"
-    t.string "name"
-    t.string "surname"
+    t.text "name"
+    t.text "surname"
     t.string "subscribe"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "todos", "types"
-  add_foreign_key "todos", "users"
+  add_foreign_key "stories", "types"
+  add_foreign_key "stories", "users"
 end
