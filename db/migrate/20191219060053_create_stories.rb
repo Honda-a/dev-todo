@@ -1,6 +1,6 @@
-class CreateTodos < ActiveRecord::Migration[6.0]
+class CreateStories < ActiveRecord::Migration[6.0]
   def change
-    create_table :todos do |t|
+    create_table :stories do |t|
       t.string :title
       t.string :detail
       t.references :type, null: false, foreign_key: true
