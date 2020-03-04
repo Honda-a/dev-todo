@@ -5,7 +5,7 @@ ruby '2.6.5'
 
 gem 'rails', '~> 6.0.2'
 gem 'sqlite3'
-gem 'puma', '~> 4.3.1'
+gem 'puma', '~> 4.3.3'
 gem 'redis', '~> 4.1.3'
 gem 'bcrypt', '~> 3.1.13'
 gem 'jwt_sessions', '~> 2.4.3'
